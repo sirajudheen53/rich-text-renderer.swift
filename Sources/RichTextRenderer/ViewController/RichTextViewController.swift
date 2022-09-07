@@ -21,7 +21,7 @@ open class RichTextViewController: UIViewController, NSLayoutManagerDelegate {
     /// The `renderer` renders `Contentful.RichTextDocument` into this view.
     public var textView: UITextView!
     
-    public var contentViewBackgroundColor: UIColor {
+    public var contentViewBackgroundColor: UIColor? {
         didSet { textView.backgroundColor = contentViewBackgroundColor }
     }
     

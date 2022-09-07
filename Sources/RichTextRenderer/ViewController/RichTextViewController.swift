@@ -19,9 +19,11 @@ open class RichTextViewController: UIViewController, NSLayoutManagerDelegate {
     private let renderer: RichTextDocumentRenderer
 
     /// The `renderer` renders `Contentful.RichTextDocument` into this view.
-    var textView: UITextView!
+    public var textView: UITextView!
     
-    var contentViewBackgroundColor: UIColor?
+    public var contentViewBackgroundColor: UIColor {
+        didSet { textView.backgroundColor = contentViewBackgroundColor }
+    }
     
     /// The underlying text storage.
     private let textStorage = NSTextStorage()
@@ -112,7 +114,7 @@ open class RichTextViewController: UIViewController, NSLayoutManagerDelegate {
     private func setupTextView() {
         textView = UITextView(frame: view.bounds, textContainer: textContainer)
         textView.textContainerInset = renderer.configuration.contentInsets
-        textView.backgroundColor = contentViewBackgroundColor ?? UIColor.rtrSystemBackground
+        textView.backgroundColor = UIColor.rtrSystemBackground
 
         view.addSubview(textView)
 

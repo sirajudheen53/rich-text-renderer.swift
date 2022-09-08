@@ -18,11 +18,11 @@ open class TextRenderer: NodeRendering {
         paragraphStyle.lineSpacing = rootRenderer.configuration.textConfiguration.lineSpacing
         paragraphStyle.paragraphSpacing = rootRenderer.configuration.textConfiguration.paragraphSpacing
 
-        let textColor = UIColor.rtrLabel
+        let textColor = rootRenderer.configuration.fontColor
 
         var attributes: [NSAttributedString.Key: Any] = [
             .font: rootRenderer.configuration.fontProvider.font(for: node),
-            .foregroundColor: textColor,
+            .foregroundColor: rootRenderer.configuration.fontColor,
             .paragraphStyle: paragraphStyle
         ]
 

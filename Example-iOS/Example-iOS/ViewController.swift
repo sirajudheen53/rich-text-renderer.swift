@@ -9,6 +9,7 @@ class ViewController: RichTextViewController {
 
     init() {
         var configuration = DefaultRendererConfiguration()
+        configuration.fontColor = UIColor.red
         configuration.resourceLinkBlockViewProvider = ExampleBlockViewProvider()
         configuration.resourceLinkInlineStringProvider = ExampleInlineStringProvider()
 

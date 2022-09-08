@@ -7,6 +7,8 @@ import UIKit
 public protocol RendererConfiguration {
     /// Provides fonts in different variations for the renderers.
     var fontProvider: FontProviding { get }
+    
+    var fontColor: UIColor { get }
 
     /// Insets of the rendered content
     var contentInsets: UIEdgeInsets { get }

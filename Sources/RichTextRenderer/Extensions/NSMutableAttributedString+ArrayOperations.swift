@@ -28,7 +28,7 @@ public extension Swift.Array where Element == NSMutableAttributedString {
             let attributedString = NSMutableAttributedString(string: "\t" + indicator + "\t")
 
             attributedString.addAttributes(
-                [.foregroundColor: UIColor.rtrLabel],
+                [.foregroundColor: rendererConfiguration.fontColor],
                 range: attributedString.fullRange
             )
 

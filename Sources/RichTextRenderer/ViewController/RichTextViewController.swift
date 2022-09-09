@@ -16,7 +16,7 @@ open class RichTextViewController: UIViewController, NSLayoutManagerDelegate {
     }
 
     /// Renderer of the `Contentful.RichTextDocument`.
-    private let renderer: RichTextDocumentRenderer
+    public let renderer: RichTextDocumentRenderer
 
     /// The `renderer` renders `Contentful.RichTextDocument` into this view.
     public var textView: UITextView!
@@ -153,7 +153,7 @@ open class RichTextViewController: UIViewController, NSLayoutManagerDelegate {
         DispatchQueue.main.async {
             var output = self.renderer.render(document: document)
             if self.trimWhitespace {
-                output = output.trim()
+                //output = output.trim()
             }
             self.textStorage.beginEditing()
             self.textStorage.setAttributedString(output)

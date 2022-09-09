@@ -7,7 +7,7 @@ import UIKit
 public struct RichTextDocumentRenderer: RichTextDocumentRendering {
 
     /// Configuration of the renderer.
-    public let configuration: RendererConfiguration
+    public var configuration: RendererConfiguration
     
     private let nodeRenderers: NodeRenderersProviding
 
